@@ -96,6 +96,7 @@ export default function App() {
               ]}
               originalPrice="1.800.000đ"
               image="https://i.postimg.cc/qqm8Dqnb/HU_O_NG_DA_N_HO_C_DU_A_N_CHUYE_N_NGHIE_P_NGUYE_N_NAM_BĐS_(1).png"
+              link="https://hocduan.nambds.vn/#preview"
             />
             <GiftCard 
               isDark
@@ -110,6 +111,7 @@ export default function App() {
               ]}
               originalPrice="2.200.000đ"
               image="https://i.postimg.cc/6q6rhn70/CHECKLIST_11_CA_U_HO_I_KHAI_THA_C_NHU_CA_U_KHA_CH_HA_NG_NGUYE_N_NAM_BĐS.png"
+              link="https://11cauhoi.nambds.vn/"
             />
           </div>
         </section>

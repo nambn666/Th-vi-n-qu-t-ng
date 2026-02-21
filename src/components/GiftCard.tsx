@@ -5,6 +5,7 @@ interface GiftCardProps {
   title: string;
   bullets: string[];
   image: string;
+  link: string;
   badge?: string;
   originalPrice?: string;
   isDark?: boolean;
@@ -14,6 +15,7 @@ export const GiftCard = ({
   title, 
   bullets, 
   image, 
+  link,
   badge, 
   originalPrice = "999.000đ",
   isDark = false 
@@ -77,9 +79,14 @@ export const GiftCard = ({
             <span className="text-2xl font-black text-orange-600 tracking-tighter drop-shadow-xl animate-pulse">MIỄN PHÍ</span>
           </div>
         </div>
-        <button className={`px-10 py-5 rounded-2xl text-lg font-black transition-all shadow-2xl hover:shadow-gold-light/40 active:scale-95 ${isDark ? 'gold-gradient text-navy' : 'blue-gradient text-white'}`}>
+        <a 
+          href={link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={`px-10 py-5 rounded-2xl text-lg font-black transition-all shadow-2xl hover:shadow-gold-light/40 active:scale-95 text-center ${isDark ? 'gold-gradient text-navy' : 'blue-gradient text-white'}`}
+        >
           Nhận quà
-        </button>
+        </a>
       </div>
     </div>
   </motion.div>
