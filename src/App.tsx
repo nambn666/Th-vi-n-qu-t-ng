@@ -11,6 +11,13 @@ import { GiftCard } from "./components/GiftCard";
 import { FeatureItem } from "./components/FeatureItem";
 
 export default function App() {
+  const scrollToGifts = () => {
+    const element = document.getElementById('gift-library');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden font-sans text-navy bg-[#fdfcf9]">
       {/* Background Decorative Elements */}
@@ -59,6 +66,7 @@ export default function App() {
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
+            onClick={scrollToGifts}
             className="relative group cursor-pointer inline-block mb-8"
           >
             <span className="text-2xl font-serif font-black tracking-[0.2em] text-gold-dark uppercase relative z-10">
@@ -77,7 +85,7 @@ export default function App() {
         </motion.header>
 
         {/* Gift Library Section */}
-        <section className="w-full mb-20">
+        <section id="gift-library" className="w-full mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-serif font-bold mb-3">Thư Viện Quà Tặng</h2>
             <p className="text-navy/60">Những tài liệu được tổng hợp và biên soạn kỹ lưỡng từ kinh nghiệm thực chiến.</p>
@@ -195,7 +203,10 @@ export default function App() {
           className="w-full max-w-2xl glass rounded-[40px] p-10 text-center shadow-2xl border-2 border-white/50"
         >
           <h2 className="text-3xl font-serif font-bold mb-8">Nhận quà ngay để nâng tầm kỹ năng</h2>
-          <button className="w-full gold-gradient text-navy font-bold py-4 rounded-2xl text-lg shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
+          <button 
+            onClick={scrollToGifts}
+            className="w-full gold-gradient text-navy font-bold py-4 rounded-2xl text-lg shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+          >
             Nhận ngay hôm nay
             <ChevronRight className="w-5 h-5" />
           </button>
