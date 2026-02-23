@@ -55,7 +55,7 @@ export default function App() {
         />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 py-12 flex flex-col items-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 py-12 flex flex-col items-center">
         {/* Header */}
         <motion.header 
           initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ export default function App() {
             <p className="text-navy/60">Những tài liệu được tổng hợp và biên soạn kỹ lưỡng từ kinh nghiệm thực chiến.</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <GiftCard 
               badge="HOT"
               title="Học dự án chuyên nghiệp"
@@ -120,6 +120,20 @@ export default function App() {
               originalPrice="2.000.000đ"
               image="https://i.postimg.cc/6q6rhn70/CHECKLIST_11_CA_U_HO_I_KHAI_THA_C_NHU_CA_U_KHA_CH_HA_NG_NGUYE_N_NAM_BĐS.png"
               link="https://11cauhoi.nambds.vn/"
+            />
+            <GiftCard 
+              badge="NEW"
+              title="CRM Sheet - Quản lý Data khách hàng"
+              bullets={[
+                "Biết ngay khách “nét” đang ở đâu",
+                "Không sót khách, không trùng follow-up",
+                "Phễu 6 tầng rõ ràng đến “Chuẩn bị cọc”",
+                "Dùng được cho người mới & leader",
+                "Có hướng dẫn + copy dùng ngay"
+              ]}
+              originalPrice="2.200.000đ"
+              image="https://i.postimg.cc/V60J0F4F/1111.png"
+              link="https://crmsheet.nambds.vn/"
             />
           </div>
         </section>
